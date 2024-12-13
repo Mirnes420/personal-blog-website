@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>The Wanderlust Code</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Font Awesome CDN for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+
+    <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">The Wanderlust Code</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <button id="mode-toggle" class="btn ml-auto">
+            <i class="fas fa-moon"></i> <!-- Moon Icon for Light/Dark Toggle -->
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1500"> <!-- data-aos and data-aos-duration, used for fade-up animation and setting the duration of the animation  -->
+      <h1>Welcome to The Wanderlust Code!</h1>
+      <p>Discover stories from the road less traveled, tech insights, and the mindset that makes it all possible. Ready to dive in?</p>
+      <a href="#blog" class="see-latest-posts">Explore My Latest Adventures</a>
+    </div>
+  </section>
+
+
+
+<!-- Blog Section -->
+<section id="blog" class="blog py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <!-- Blog Header -->
+          <div class="col-12 col-lg-8 mb-4">
+              <h2 class="d-flex justify-content-between align-items-center" data-aos="fade-up" data-aos-duration="1500">
+                  Latest Blog Posts
+                  <!-- Toggle Button for Small, Medium Screens (From 768px - 996px) -->
+                  <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
+                    <i class="fas fa-bars"></i> <!-- Menu Icon -->
+                  </button>
+              </h2>
+          </div>
+      </div>
+
+      <!-- Row for Blog Posts and Sidebar -->
+      <div class="row mt-4">
+        
+          <!-- Sidebar for Small and Medium Screens -->
+          <div class="col-12 collapse d-md-block d-lg-none" id="sidebar">
+              <div class="sidebar">
+                  <!-- Search Bar -->
+                  <div class="search mb-4">
+                      <input type="text" class="form-control" placeholder="Search posts...">
+                  </div>
+  
+                  <!-- Categories -->
+                  <div class="categories mb-4">
+                      <h5>Categories</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-plane-departure"></i> Travel</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-laptop-code"></i> Tech</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-brain"></i> Mindset</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-cogs"></i> Lifestyle</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-briefcase"></i> Career</a></li>
+                      </ul>
+                  </div>
+  
+                  <!-- Recent Posts -->
+                  <div class="recent-posts">
+                      <h5>Recent Posts</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="sidebar-link-recent">Exploring the World Through Code</a></li>
+                          <li><a href="#" class="sidebar-link-recent">Tech & Travel: The Ultimate Combo</a></li>
+                          <li><a href="#" class="sidebar-link-recent">Mindset for Success</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Main Content (Blog Posts) -->
+          <div class="col-12 col-lg-8 mb-4">
+              <div class="row" id="blog-posts">
+                  <!-- Blog 1 -->
+                  <div class="col-12 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                      <div class="card">
+                          <img src="images/binary.jpg" class="card-img-top" alt="Blog Post 1">
+                          <div class="card-body">
+                              <h5 class="card-title">Exploring the World Through Code</h5>
+                              <p class="card-text">How learning to code has opened up doors to travel, new experiences, and life-changing adventures. Join me on this journey!</p>
+                              <a href="#" class="d-flex justify-content-end read-more">Read More</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Blog 2 -->
+                  <div class="col-12 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card">
+                        <img src="images/air.png" class="card-img-top" alt="Blog Post 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Tech & Travel: The Ultimate Combo</h5>
+                            <p class="card-text">How integrating technology with travel can enhance your experience and productivity. A guide for digital nomads and wanderers alike!</p>
+                            <a href="#" class="d-flex justify-content-end read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Blog 3 -->                 
+                  <div class="col-12 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card">
+                        <img src="images/brain.png" class="card-img-top" alt="Blog Post 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Mindset for Success</h5>
+                            <p class="card-text">A deep dive into how a positive mindset shapes our career, personal growth, and overall happiness. Tips for a better tomorrow.</p>
+                            <a href="#" class="d-flex justify-content-end read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                  
+                  <!-- Blog 4 -->
+                  <div class="col-12 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
+                      <div class="card">
+                          <img src="images/sea.png" class="card-img-top" alt="Blog Post 4">
+                          <div class="card-body">
+                              <h5 class="card-title">Building a Digital Nomad Lifestyle</h5>
+                              <p class="card-text">Tips and advice for aspiring digital nomads: from finding remote work to managing travel and work-life balance.</p>
+                              <a href="#" class="d-flex justify-content-end read-more">Read More</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          
+          <!-- Sidebar for Large Screens -->
+          <div class="col-12 col-lg-4 mb-4 d-none d-lg-block" data-aos="fade-up" data-aos-duration="1500">
+              <div class="sidebar">
+                  <!-- Search Bar -->
+                  <div class="search mb-4">
+                      <input type="text" class="form-control" placeholder="Search posts...">
+                  </div>
+  
+                  <!-- Categories -->
+                  <div class="categories mb-4">
+                      <h5>Categories</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-plane-departure"></i> Travel</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-laptop-code"></i> Tech</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-brain"></i> Mindset</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-cogs"></i> Lifestyle</a></li>
+                          <li><a href="#" class="sidebar-link"><i class="fas fa-briefcase"></i> Career</a></li>
+                      </ul>
+                  </div>
+  
+                  <!-- Recent Posts -->
+                  <div class="recent-posts">
+                      <h5>Recent Posts</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#" class="sidebar-link-recent">Exploring the World Through Code</a></li>
+                          <li><a href="#" class="sidebar-link-recent">Mindset for Success</a></li>
+                          <li><a href="#" class="sidebar-link-recent">Tech & Travel: The Ultimate Combo</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+  <!-- dividor -->
+<hr />
+
+
+<!-- About Me Section -->
+<section id="about">
+  <div class="container" data-aos="fade-up" data-aos-duration="1500">
+    <h1>About Me</h1>
+    <div class="row align-items-center">
+
+
+      <!-- Personal Interests -->
+      <div id="personal-interests" class="col-12 col-lg-4 mb-4">
+        <div class="card about-me-card">
+            <p class="card-title">Personal Interests <i class="fas fa-heart icon"></i></p>
+            <p class="card-text">
+              Outside of my professional life, I am passionate about traveling, photography, and exploring new cultures. I believe that experiencing different parts of the world broadens one's perspective and enhances creativity. I also enjoy reading, particularly books on personal development, technology, and history. These hobbies not only allow me to relax but also help me grow as a person, providing a well-rounded balance to my technical career.
+            </p>
+        </div>
+    </div>
+
+        <!-- Education background -->
+        <div id="education-background" class="col-12 col-lg-4 mb-4">
+            <div class="card about-me-card">
+                <p class="card-title">Education background <i class="fas fa-graduation-cap icon"></i></p>
+                <p class="card-text">
+                  Apart from <strong>freeCodeCamp</strong> online courses and a year in <strong>Vocational School for Software Development </strong>in Germany,
+                  I worked as a Software Developer where I tackled new challenges daily and had the chance to continuously develop my programming skills 
+                  with interesting projects. This blend of technical and soft skills positions me well for tackling complex challenges and contributing effectively to any team.
+                </p>
+            </div>
+        </div>
+
+
+         <!-- Future Goals -->
+         <div id="future-goals" class="col-12 col-lg-4 mb-4">
+          <div class="card about-me-card">
+              <p class="card-title">Future Goals <i class="fas fa-bullseye icon"></i></p>
+              <p class="card-text">
+                Looking ahead, I am committed to further enhancing my technical skills and deepening my expertise in fields such as artificial intelligence, software development, and best practices in development. I also aspire to collaborate with like-minded professionals across the globe. My long-term goal is to work on innovative projects that address some of the world's most pressing challenges, to make a meaningful impact on society.
+              </p>
+          </div>
+      </div>
+
+
+              <!-- Tech & Talents -->
+              <div id="tech-talents" class="col-12 col-lg-4 mb-4">
+                <div class="card about-me-card">
+                    <p class="card-title">Tech & Talents <i class="fas fa-laptop-code icon"></i></p>
+                    <p class="card-text">
+                      Balancing roles as a waiter and receptionist, I've sharpened my communication skills and embraced self-learning. 
+                      These experiences have taught me to handle multiple responsibilities efficiently, adapt to various work environments, and maintain a customer-centric approach.
+                      My coding journey involves mastering <strong>HTML, CSS, JavaScript</strong>, and expanding my <strong>Python</strong> expertise using the <strong>Django framework</strong>. I also have some experience in <strong>React, jQuery MongoDB, sql</strong> and <strong>git</strong>.
+                      In addition to my technical skills, I have cultivated a problem-solving mindset and a passion for continuous learning.
+                    </p>
+                </div>
+            </div>
+    
+                     <!-- Language Journey -->
+                     <div id="language-journey" class="col-12 col-lg-4 mb-4">
+                      <div class="card about-me-card">
+                          <p class="card-title">Language Journey <i class="fas fa-book icon"></i></p>
+                          <p class="card-text">
+                            Throughout my education, I dedicated myself to improving my <strong>English</strong> fluency,
+                            which blossomed through daily interactions with guests during my time as a receptionist and a waiter.
+                            While residing in Germany, I was actively enhancing my <strong>German</strong> language skills,
+                            embracing daily communication as a pathway to continuous self-improvement.
+                            I am also learning <strong>Portugese</strong> in my spare time.
+                            This linguistic journey has not only expanded my communication abilities but also deepened my understanding of different cultures and perspectives.
+                          </p>
+                      </div>
+                  </div>
+            
+        
+    </div>
+  </div>
+</section>
+
+
+<!-- dividor -->
+<hr />
+
+  <!-- Contact Section -->
+    <section id="contact" class="w-50 mx-auto" data-aos="fade-up" data-aos-duration="1500">
+      <h2 class="section-title">Contact</h2>
+      <div class="row">
+          <div class="col-md-12" data-aos="fade-up">
+              <form id="contactForm" action="#" method="post" class="p-3">
+                  <div class="mb-3">
+                      <label for="email" class="form-label"></label>
+                      <input type="email" id="email" name="email" class="form-control p-3" placeholder="Your E-Mail:" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="subject" class="form-label"></label>
+                      <input type="text" id="subject" name="subject" class="form-control p-3" placeholder="Subject:" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="message" class="form-label"></label>
+                      <textarea id="message" name="message" rows="4" class="form-control p-3" placeholder="Message:" required></textarea>
+                  </div>
+                  <input type="submit" value="Send message" class="btn btn-primary">
+              </form>
+          </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+<section id="footer">
+ <footer>
+
+   
+  <h2 id="coffe"> Mirnes Nuhanovic Blog, 2024 </h2>
+  <div class="footer">
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Mirnes420/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <br />
+    <a href="#hero">Back to Top</a>
+   
+   
+  </div>
+</footer>
+</section>
+
+
+<!-- Scripts for dark-light mode and AOS -->
+<script>
+  // Initialize AOS for our animations
+  AOS.init();
+
+  // Dark/Light Mode Toggle
+  document.getElementById('mode-toggle').addEventListener('click', function() {
+      // Toggle dark mode on the body
+      document.body.classList.toggle('dark-mode');
+      
+      // Toggle navbar classes for dark/light mode
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('navbar-dark');
+      navbar.classList.toggle('bg-dark');
+      navbar.classList.toggle('navbar-light');
+      navbar.classList.toggle('bg-light');
+      
+      // Change the icon (moon/sun) based on the mode
+      const modeToggleButton = document.getElementById('mode-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+          modeToggleButton.innerHTML = '<i class="fas fa-sun text-warning"></i>';  // Sun Icon for Dark Mode
+      } else {
+          modeToggleButton.innerHTML = '<i class="fas fa-moon text-dark"></i>';  // Moon Icon for Light Mode
+      }
+  });
+</script>
+
+
+</body>
+</html>

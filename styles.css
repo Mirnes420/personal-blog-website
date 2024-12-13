@@ -1,0 +1,339 @@
+/* Default (Light Mode) */
+:root {
+    /* Light Mode color variables */
+    --primary-color: #ff6f61;      
+    --primary-hover-color: #e05c4d; 
+    --overlay-color: rgba(0, 0, 0, 0.5); 
+    --text-color: white;          
+    --background-color: #ffffff;   
+    --hero-background: url('images/mountain.jpg') no-repeat center center/cover; 
+    --card-text: #212529;
+}
+
+/* Dark Mode color variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #ff6f61;       /* Button color */
+        --primary-hover-color: #e05c4d;  /* Button hover color */
+        --overlay-color: rgba(0, 0, 0, 0.5); /* Overlay color */
+        --text-color: #ffffff;           /* Text color */
+        --background-color: #181818;     /* Dark background color */
+        --card-text: white;  /* Card text color in dark mode */
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+body.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+
+/* Navbar */
+#navbar {
+    z-index: 100; /* setting z-index so the navbar is always visible */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; 
+    background: var(--hero-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+/* Overlay for better text contrast */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.see-latest-posts {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.see-latest-posts:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Blogs */
+
+.card-title, .card-text {
+    color: var(--card-text) !important;
+}
+
+.card-img-top {
+    height: 20em; 
+    object-fit: cover; /* Ensures images cover the area of the container without distortion */
+    width: 100%; /* Ensures the image fills the width of the card */
+    border-radius: 40px;
+}
+
+
+.read-more {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color:var(--primary-hover-color);
+}
+
+
+
+/* Blogs Sidebar */
+.sidebar {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a shadow for depth */
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+
+.sidebar h5 {
+    font-weight: bold;
+    color: var(--card-text);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.sidebar-link, .sidebar-link-recent{
+    text-decoration: none;
+    color: var(--card-text);;
+}
+.sidebar-link-recent:hover {
+    text-decoration: underline;
+}
+
+.categories .sidebar-link {
+    display: flex;
+    align-items: center;
+    color: var(--card-text);  
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.categories .sidebar-link i {
+    margin-right: 10px;  /* Space between icon and text */
+    font-size: 1.3rem;  /* Make icons slightly larger */
+}
+
+.categories .sidebar-link:hover {
+    color: var(--primary-color);  /* Change the color on hover */
+}
+
+/* Blog Posts */
+#blog-posts .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#blog-posts .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for input */
+    transition: all 0.3s ease;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Center the toggle button on smaller screens */
+@media (max-width: 767px) {
+    .blog h2 {
+        margin-bottom: 0;
+    }
+
+    .btn-outline-primary {
+        width: 100%;  /* full width on smaller screens */
+    }
+
+    .row.align-items-center .col-lg-4 {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px; 
+    }
+}
+
+/* On larger screens, button is hidden */
+@media (min-width: 768px) {
+    .d-lg-none {
+        display: none;
+    }
+}
+
+/* Align blog posts and sidebar */
+.blog .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* About me SECTION */
+#about {
+    padding: 50px 0;
+  }
+  
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+    }
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 30em; /* max-width in em for responsiveness */
+    height: 40em; /* height in em for equal card heights */
+    padding: 2em; /* padding in em for consistency */
+    margin: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+/* Card Titles and Text */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    }
+
+.card-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    }
+
+/* Icons in cards */
+.icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: var(--primary-color);
+    }
+  
+
+/* Contact */
+#contact {
+    margin-bottom: 2em;
+}
+
+#contactForm {
+    border: none;
+}
+/* Footer */
+footer {
+    background-color: var(--card-text);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid var(--background-color);
+    }
+
+footer a {
+    color: var(--background-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    }
+
+footer a:hover {
+    color: var(--primary-color);
+    transition: .4s;
+    }
+  
